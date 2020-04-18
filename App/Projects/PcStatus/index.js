@@ -17,5 +17,5 @@ setInterval(() => {
   console.clear();
   console.log("*** PC STATUS ***");
   console.table(stats);
-  logger("Rodando o status da memoria...");
+  logger(`${JSON.stringify(stats)}\n`);
 }, 1000);
