@@ -5,7 +5,11 @@ const path = require("path");
 http
   .createServer((req, res) => {
     const file = req.url === "/" ? "index.html" : req.url;
-    console.log(file);
-    res.end("cheguei");
+    const filePath = path.join(__dirname, "public", file);
+
+    fs.readFile(filePath, (err, content) => {
+      if (err) throw err;
+      res.end(content);
+    });
   })
   .listen(5000, () => console.log("Server is running"));
