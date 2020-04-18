@@ -7,6 +7,12 @@ http
     const file = req.url === "/" ? "index.html" : req.url;
     const filePath = path.join(__dirname, "public", file);
 
+    const allowedFileTypes = [".html", ".css", ".js"];
+    const extname = path.extname(filePath);
+    const allowed = allowedFileTypes.find((item) => item === extname);
+
+    if (!allowed) return;
+
     fs.readFile(filePath, (err, content) => {
       if (err) throw err;
       res.end(content);
