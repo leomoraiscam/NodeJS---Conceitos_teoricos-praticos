@@ -1,0 +1,13 @@
+{
+  "name": "http-request",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
