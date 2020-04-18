@@ -10,4 +10,4 @@ function log(message) {
   emmiter.emit("log", message);
 }
 
-log("Node JS");
+module.exports = log;
