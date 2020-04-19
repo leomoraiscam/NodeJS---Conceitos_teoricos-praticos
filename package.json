@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "dev": "nodemon App/Projects/Http-request/server.js",
+    "api": "nodemon App/Projects/Api/index.js",
+    "start": "node App/Projects/Http-request/server.js"
   },
   "license": "MIT",
   "devDependencies": {
