@@ -12,7 +12,7 @@ function writeFile(cb) {
     (err) => {
       if (err) throw err;
 
-      cb(JSON.stringify({ message: "Content deleted" }));
+      cb(JSON.stringify({ message: "Ok" }));
     }
   );
 }
@@ -31,6 +31,7 @@ http
     }
 
     //create
-    return res.end("create");
+    data.urls.push({ name, url });
+    return writeFile((message) => res.end(message));
   })
   .listen(3000, () => console.log("Api is running"));
