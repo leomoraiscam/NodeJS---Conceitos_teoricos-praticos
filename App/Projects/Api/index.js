@@ -5,6 +5,18 @@ const path = require("path");
 
 const data = require("./urls.json");
 
+function writeFile(cb) {
+  fs.writeFile(
+    path.join(__dirname, "urls.json"),
+    JSON.stringify(data, null, 2),
+    (err) => {
+      if (err) throw err;
+
+      cb(JSON.stringify({ message: "Content deleted" }));
+    }
+  );
+}
+
 http
   .createServer((req, res) => {
     const { name, url, del } = URL.parse(req.url, true).query;
@@ -15,15 +27,7 @@ http
     //delete
     if (del) {
       data.urls = data.urls.filter((item) => String(item.url) != String(url));
-      return fs.writeFile(
-        path.join(__dirname, "urls.json"),
-        JSON.stringify(data, null, 2),
-        (err) => {
-          if (err) throw err;
-
-          res.end(JSON.stringify({ message: "Content deleted" }));
-        }
-      );
+      return writeFile((message) => res.end(message));
     }
 
     //create
