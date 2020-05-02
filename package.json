@@ -3,17 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leomoraiscam/NodeJS---Conceitos_teoricos-praticos.git"
-  },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/leomoraiscam/NodeJS---Conceitos_teoricos-praticos.git"
-  },
-  "homepage": "https://github.com/leomoraiscam/NodeJS---Conceitos_teoricos-praticos.git",
   "dependencies": {
     "axios": "^0.19.2"
   },
