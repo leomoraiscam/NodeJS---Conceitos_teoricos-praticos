@@ -1,9 +1,19 @@
 {
-  "name": "http-request",
+  "name": "NodeJS - Base",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leomoraiscam/NodeJS---Conceitos_teoricos-pratico.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leomoraiscam/NodeJS---Conceitos_teoricos-praticos/issues"
+  },
+  "homepage": "https://github.com/leomoraiscam/NodeJS---Conceitos_teoricos-praticos#readme",
   "dependencies": {
     "axios": "^0.19.2"
   },
