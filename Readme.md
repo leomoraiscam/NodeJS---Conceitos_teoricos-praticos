@@ -1,5 +1,5 @@
 <h1 align='center'>
-  <img src='https://ik.imagekit.io/xa9e0paa00/Node_-_Base_-_Application/green-leaf-logo-png-clipart_BuzovYTFy.jpg'>
+  <img src='https://ik.imagekit.io/xa9e0paa00/Node_-_Base_-_Application/node-js-736399_960_720__1__0qx7U8JdZ.webp'>
   <br />
   Node.Js - Conceitos na prática
 </h1>
