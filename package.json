@@ -1,5 +1,5 @@
 {
-  "name": "NodeJS - Base",
+  "name": "NodeJS",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {},
@@ -15,7 +15,8 @@
   },
   "homepage": "https://github.com/leomoraiscam/NodeJS---Conceitos_teoricos-praticos#readme",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
