@@ -19,6 +19,13 @@ class Database {
     return true;
   }
 
+  async listar(id) {
+    const dados = await this.obterDados();
+    const dadosFiltrados = dados.filter((item) => (id ? item.id === id : true));
+
+    return dadosFiltrados;
+  }
+
   async cadastrar(heroi) {
     const dados = await this.obterDados();
     const id = heroi.id <= 2 ? heroi.id : Date.now();
@@ -32,11 +39,21 @@ class Database {
     return resultado;
   }
 
-  async listar(id) {
-    const dados = await this.obterDados();
-    const dadosFiltrados = dados.filter((item) => (id ? item.id === id : true));
+  async remover(id) {
+    if (!id) {
+      return await this.escreverArquivo([]);
+    }
 
-    return dadosFiltrados;
+    const dados = await this.obterDados();
+    const indice = dados.findIndex((item) => item.id === parseInt(id));
+
+    if (indice === -1) {
+      throw Error("O usuário informado não existe");
+    }
+
+    dados.splice(indice, 1);
+
+    return await this.escreverArquivo(dados);
   }
 }
 

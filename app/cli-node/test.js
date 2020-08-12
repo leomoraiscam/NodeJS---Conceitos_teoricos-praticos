@@ -13,8 +13,8 @@ describe("Suite de manipulação de Herois", () => {
   });
 
   it("Deve pesquisar um heroi, usando arquivos", async () => {
-    const expected = { DEFAULT_ITEM_CADASTRAR };
-    const [resultado] = await database.listar(expected.id);
+    const expected = DEFAULT_ITEM_CADASTRAR;
+    const resultado = await database.listar(expected.id);
 
     deepEqual(resultado, expected);
   });
@@ -26,5 +26,11 @@ describe("Suite de manipulação de Herois", () => {
     const [atual] = await database.listar(DEFAULT_ITEM_CADASTRAR.id);
 
     deepEqual(atual, expected);
+  });
+  it("Deve remover um heroi por id", async () => {
+    const expected = true;
+    const resultado = await database.remover(DEFAULT_ITEM_CADASTRAR.id);
+
+    deepEqual(resultado, expected);
   });
 });
